@@ -4,13 +4,13 @@ exp:
 dataset:
     import: mnist.datasets.factory
     name: mnist
-    dir: /local/cadene/data/mnist
+    dir: data/mnist
     train_split: train
     eval_split: val
     nb_threads: 4
     batch_size: 64
 model:
-    name: default
+    name: simple
     network:
         import: mnist.models.networks.factory
         name: net
