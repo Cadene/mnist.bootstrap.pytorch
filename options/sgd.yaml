@@ -1,7 +1,7 @@
 __include__: abstract.yaml
 exp:
-    dir: logs/mnist/sgd
+  dir: logs/mnist/sgd
 optimizer:
-    name: sgd
-    lr: 0.01
-    momentum: 0.5
+  name: sgd
+  lr: 0.01
+  momentum: 0.5
