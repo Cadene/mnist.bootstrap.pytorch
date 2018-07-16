@@ -29,9 +29,9 @@ engine:
   nb_epochs: 10
   print_freq: 10
   saving_criteria:
-  - loss:lt          # save when new_best < best
-  - accuracy_top1:gt # save when new_best > best
-  - accuracy_top5:gt # save when new_best > best
+  - loss:min          # save when new_best < best
+  - accuracy_top1:max # save when new_best > best
+  - accuracy_top5:max # save when new_best > best
 misc:
   cuda: False
   seed: 1337
