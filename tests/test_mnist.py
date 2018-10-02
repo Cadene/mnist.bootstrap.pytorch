@@ -14,6 +14,7 @@ def test_run():
     sys.argv += [
         '-o', 'mnist/options/sgd.yaml',
         '--engine.nb_epochs', '1',
-        '--engine.debug', 'True'
+        '--engine.debug', 'True',
+        '--exp.dir', 'logs/mnist/test_run'
     ]
     main(run=run)
