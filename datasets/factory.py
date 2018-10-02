@@ -1,6 +1,7 @@
 from bootstrap.lib.options import Options
 from .mnist import MNIST
 
+
 def factory(engine=None):
     dataset = {}
 
@@ -24,4 +25,3 @@ def factory_mnist(split):
         nb_threads=Options()['dataset']['nb_threads'],
         pin_memory=Options()['misc']['cuda'])
     return dataset
-

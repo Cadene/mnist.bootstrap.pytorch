@@ -7,6 +7,7 @@ from torchvision import transforms
 
 from bootstrap.datasets import transforms as bootstrap_tf
 
+
 class MNIST(data.Dataset):
 
     def __init__(self, dir_data='data/mnist', split='train', batch_size=100, nb_threads=1, pin_memory=True):
@@ -26,8 +27,8 @@ class MNIST(data.Dataset):
             raise ValueError()
 
         self.item_tf = transforms.Compose([
-           transforms.ToTensor(),
-           transforms.Normalize((0.1307,), (0.3081,))
+            transforms.ToTensor(),
+            transforms.Normalize((0.1307,), (0.3081,))
         ])
 
         download = (not os.path.isdir(self.dir_data))
@@ -40,7 +41,7 @@ class MNIST(data.Dataset):
             bootstrap_tf.ListDictsToDictLists(),
             bootstrap_tf.StackTensors()
         ])
-        
+
     def __getitem__(self, index):
         data, class_id = self.dataset[index]
         item = {}

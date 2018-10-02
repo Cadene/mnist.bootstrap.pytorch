@@ -1,11 +1,10 @@
-import torch
-import torch.nn as nn
 import bootstrap.lib.utils as utils
 from bootstrap.lib.options import Options
 from bootstrap.lib.logger import Logger
 from bootstrap.models.networks.data_parallel import DataParallel
 
 from .net import Net
+
 
 def factory(engine=None):
 
